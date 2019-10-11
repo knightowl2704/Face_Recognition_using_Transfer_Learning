@@ -26,4 +26,11 @@ For finding out the closest encoding, we can use simple Eucledian Distance or Co
 
 We define a threshold of 0.5 for determining whether the image is a match or not a match.
 
+For now, one test image is provided at a particular time to calculate the scores. Given below are some of the screenshots of the predictions.
 
+![Test Image 1](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Screenshots/Screenshot%20(6).png)
+![Test Image 2](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Screenshots/Screenshot%20(7).png)
+![Test Image 3](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Screenshots/Screenshot%20(8).png)
+![Test Image 4](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Screenshots/Screenshot%20(9).png)
+
+The test image 1 shows a very high score because the label Selton Mello was in the original training set of the trained network. However the model still predicts on unknown test samples test image 2,3,4 with considerable amount of accuracy, even when the model has not seen the inputs before this. 
