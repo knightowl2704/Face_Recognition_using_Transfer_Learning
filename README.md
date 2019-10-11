@@ -1,0 +1,2 @@
+# Face_Recognition_using_Transfer_Learning
+Implementing Face recognition using transfer learning using VGGFace
