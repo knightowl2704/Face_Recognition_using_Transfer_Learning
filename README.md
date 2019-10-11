@@ -1,9 +1,11 @@
 # Face_Recognition_using_Transfer_Learning
-Implementing Face recognition using transfer learning using VGGFace
+Implementing Face recognition using transfer learning using VGGFace (Not-Real time)
 
 This repository shows how we can use transfer learning in Keras with the model **ResNet50** architecture. This repo is based on the keras-vggface by Refik Can Malli. It makes use of keras-vggface for importing various models from the vggface.models.py like RESNET50, VGG16, and SENET50. 
 
 <br> 
+
+
 
 Face Recognition can be broken down into 2 stages : 
 * Face Detection 
@@ -23,3 +25,5 @@ For finding out the closest encoding, we can use simple Eucledian Distance or Co
 `score = cosine(known_embedding, candidate_embedding)`
 
 We define a threshold of 0.5 for determining whether the image is a match or not a match.
+
+
