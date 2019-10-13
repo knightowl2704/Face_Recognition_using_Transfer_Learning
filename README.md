@@ -1,5 +1,5 @@
 # Face_Recognition_using_Transfer_Learning
-Implementing Face recognition using transfer learning using VGGFace (Not-Real time)
+Implementing Face recognition using transfer learning using VGGFace (Image + Real Time)
 
 This repository shows how we can use transfer learning in Keras with the model **ResNet50** architecture. This repo is based on the keras-vggface by Refik Can Malli. It makes use of keras-vggface for importing various models from the vggface.models.py like RESNET50, VGG16, and SENET50. 
 
@@ -11,7 +11,7 @@ Face Recognition can be broken down into 2 stages :
 * Face Detection 
 * Face Verification
 
-Haar Cascades can be used for face detection along with OpenCV for real time face detection. In this repo we are using MTCNN ( Multi-Task Cascaded Convolutional Neural Network) for detecting faces. 
+Haar Cascades can be used for face detection along with OpenCV for real time face detection. In this repo I am using MTCNN ( Multi-Task Cascaded Convolutional Neural Network) for detecting faces. 
 
 Once the face is detected, we run through our pre trained ResNET model with the obtained image for finding out the encodings.
 `model = model = VGGFace(model='resnet50')`
@@ -38,7 +38,7 @@ The test image 1 shows a very high score because the label Selton Mello was in t
 
 <h1> Real Time Face Detection </h1>
 
-Very similar to the Non-Real time face recognition, [this](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Real_time_implementation.py) makes use of **VGG_Face** architecture. The algorithm is same as before, however the face is now detected using **HaarCascade Classifier** for faster real time response, a dictionary of employees is used to store the id and the representation (`model.predict(employee_image)`), and each frame capture with **OpenCV** is checked for the employee id in employee dict. Whenever the *cosineSimilarity* is below the threshold, the name of employee is displayed on the frame. 
+Very similar to the Non-Real time face recognition, [this](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Real_time_implementation.py) makes use of **VGG_Face** architecture. The algorithm is same as before, however the face is now detected using **HaarCascade Classifier** for faster real time response, a dictionary of employees is used to store the id and the representation (`model.predict(employee_image)`), and each frame capture with **OpenCV** is checked for the employee id in employee dict. Whenever the *cosineSimilarity* (`score = cosine(employee_representation, frame_representation)`) is below the threshold, the name of employee is displayed on the frame. 
 
 Tested on Video Capture feed : (1 person, multiple people)
 ![Test Image 1](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Screenshots/Screenshot%20(13).png)
@@ -50,4 +50,6 @@ However for real time implementation, the model with pre trained weights predict
 
 The accuracy of real time model can be boosted by training some of the final layers of model with training dataset, due to very small dataset of images, this is not implemented yet. It will be added soon. 
 
+For testing, just update the */images* folder with the employee images, with names in the format *xyz*.**jpg** (strictly) and the test image in test folder. 
+For Real Time : Just update the */images* folder with the employee images, with names in the format *xyz*.**jpg** (strictly).
 
