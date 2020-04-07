@@ -1,7 +1,7 @@
 # Face_Recognition_using_Transfer_Learning
 Implementing Face recognition using transfer learning using VGGFace (Image + Real Time)
 
-This repository shows implementation of transfer learning in Keras with the **ResNet50** architecture for face recognition system. This repo is based on the `keras-vggface` by Refik Can Malli. It makes use of keras-vggface for importing various models from the vggface's models.py, like **RESNET50**, **VGG16**, and **SENET50.** 
+This repository shows implementation of transfer learning in Keras with the **ResNet50** architecture for face recognition system. This repo is based on the `keras-vggface` by Refik Can Malli. It uses keras-vggface for importing various models from the vggface's models.py, like **RESNET50**, **VGG16**, and **SENET50.** 
 
 <br> 
 
