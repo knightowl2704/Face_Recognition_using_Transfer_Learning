@@ -41,11 +41,6 @@ The test image 1 shows a very high score because the label Selton Mello was incl
 
 Very similar to the Non-Real time face recognition, [this](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Real_time_implementation.py) makes use of **VGG_Face** architecture. The algorithm is same as before, however the face is now detected using **HaarCascade_frontal_face Classifier** for faster real-time response, a dictionary of employees is used to store the id and the representation (`representation = model.predict(employee_image)`), and each frame capture with **OpenCV** from webcam is checked for the employee id in the employee_dict for the CosineSimilarity of the representation of current frame and representation already saved in the employee_dict. Whenever the *cosineSimilarity* (`score = cosine(employee_representation, frame_representation)`) drops below the threshold, the name of employee is displayed on the frame. 
 
-Tested on Video Capture feed : (1 person, multiple people)
-![Test Image 1](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Screenshots/Screenshot%20(13).png)
-![Test Image 3](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Screenshots/Screenshot%20(26).png)
-![Test Image 2](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Screenshots/Screenshot%20(27).png)
-![Test Image 4](https://github.com/knightowl2704/Face_Recognition_using_Transfer_Learning/blob/master/Screenshots/Screenshot%20(28).png)
 
 However for real time implementation, the model with pre trained weights performed with small accuracy as compared to Non-Real time implementation. Various models like **ResNet50, SeNet, and vgg16** were used for the same implementation and poor results were obtained.
 
